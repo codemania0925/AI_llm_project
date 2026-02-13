@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG Sample – Query → Vector DB → LLM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>RAG Sample</h1>
+      <p class="subtitle">User → Frontend → API → Embeddings → Vector DB → LLM → Response</p>
+    </header>
+
+    <main>
+      <section class="index-section card">
+        <h2>1. Index Documents</h2>
+        <p>Add sample docs to the vector DB first.</p>
+        <button id="indexBtn" type="button">Index Sample Documents</button>
+        <span id="indexStatus" class="status"></span>
+      </section>
+
+      <section class="query-section card">
+        <h2>2. Ask a Question</h2>
+        <div class="input-row">
+          <input id="questionInput" type="text" placeholder="e.g. What is Python used for?" />
+          <button id="queryBtn" type="button">Query</button>
+        </div>
+        <div id="answer" class="answer"></div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
